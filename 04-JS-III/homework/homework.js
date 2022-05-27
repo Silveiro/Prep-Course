@@ -62,6 +62,11 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
+  arry = array.map(myFunction);
+  function myFunction (value, index, arreglo){
+    return value + " ";
+  }
+  return (arry.toString());
 }
 
 
@@ -69,6 +74,11 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  newArray = array.some(myNewFunction);
+  function myNewFunction (value,index,array){
+    return elemento == value;
+  }
+  return newArray;
 }
 
 
@@ -76,6 +86,7 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  
 }
 
 
@@ -90,6 +101,9 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  let nums = numeros.sort(function(a, b){return b - a});
+  arry = nums.shift();
+  return (arry);
 }
 
 
