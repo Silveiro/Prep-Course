@@ -62,10 +62,12 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  var totall = "";
-  palabras.forEach(function (a) { totall = totall + " " + a; });
-  return totall;
-}
+    var totall = ""; 
+    var nuevoArreglito = [];
+    for(var i = 0; i<palabras.length;i++)
+    nuevoArreglito.push(palabras[i]);
+    return nuevoArreglito.join(" ");
+  }
 
 
 
@@ -127,7 +129,18 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-}
+  if (arguments.length == 0){
+    return 0;
+  }else if(arguments.length == 1){
+    return arguments[0];
+  }else{
+    var total = 1;
+    for (var i = 0; i < arguments.length;i++){
+      total = total*arguments[i];
+    }
+      return total;
+    }
+  }
 
 
 function cuentoElementos(arreglo) {
@@ -142,6 +155,7 @@ function cuentoElementos(arreglo) {
       total = total + 0;
     }
   } return (total);
+
 }
 
 
@@ -181,10 +195,20 @@ function empiezaConNueve(n) {
 function todosIguales(arreglo) {
   //Escriba la función todosIguales, que indique si todos los elementos de un arreglo son iguales:
   //retornar true, caso contrario retornar false.
-  //Escribe tu código aquí  
+  //Escribe tu código aquí 
+  var nuevoArreg = [];
+  for (var i = 0; i < arreglo.length; i++) {
+    nuevoArreg.push((arreglo[0] == arreglo[i]));
+  };
+  var final = nuevoArreg.find(myFunctionFind);
+  function myFunctionFind(value, index, array) {
+    return value == false;
+  } if (final == false) {
+    return false;
+  } else if (final == undefined) {
+    return true;
+  }
 }
-
-
 
 
 
@@ -194,43 +218,16 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:  
-  function dePalabrasAFrase(palabras) {
 
-
-    var totall = "";
-    palabras.forEach(function (a) { totall = totall + " " + a; });
-    return totall;
-  }
-
-  arry = array.filter(myFunction5);
-  function myFunction5(value, index, array) {
-    return value == "Enero" || value == "Marzo" || value == "Noviembre";
-  }
-
-  var ordenado = arry.sort();
-  var mesesok = ['Enero', 'Marzo', 'Noviembre'];
-  var ordenadook = dePalabrasAFrase(ordenado);
-  var mesesokok = dePalabrasAFrase(mesesok);
-
-  if (mesesokok == ordenadook) {
-    return ordenado;
-  } else {
-    return "No se encontraron los meses pedidos"
-  }
-}
-
-function mesesDelAño(array) {
-  var arry = array.forEach(myNewFunction); 
-  var nuevoArray = [];
-  function myNewFunction(value, index, array) {
-    if (value == "Enero" || value == "Marzo" || value == "Noviembre") {
-      nuevoArray.push(value); 
-      console.log(nuevoArray);
+    var m = array.filter(myFunctionFilter);
+    function myFunctionFilter(value, index, array) {
+      return value == "Enero" || value == "Marzo" || value == "Noviembre";
+    } if (m.length > 2) {
+      return m;
     } else {
-      console.log("No se encontro");
+      return "No se encontraron los meses pedidos";
     }
-  } return arry;
-}
+  }
 
 
 function mayorACien(array) {
@@ -253,6 +250,18 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
+  nuevoarreglo = [];
+  Loop1:
+  for (let i = 0; i <= 20; i++) {
+    i + 1;
+    numero = numero + i; nuevoarreglo.push(numero);
+
+    Loop2:
+    for (let i = 10; i < 15; i++) {
+      numero = numero + i;
+      if (i === numero) break Loop1; return "Se interrumpió la ejecución";
+    }
+  }
 }
 
 
