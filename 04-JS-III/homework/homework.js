@@ -62,10 +62,10 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-    var totall = "";
-    palabras.forEach(function (a) { totall = totall + " " + a; });
-    return totall;
-  }
+  var totall = "";
+  palabras.forEach(function (a) { totall = totall + " " + a; });
+  return totall;
+}
 
 
 
@@ -194,30 +194,43 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:  
-    function dePalabrasAFrase(palabras) {
-      
-      
-        var totall = "";
-        palabras.forEach(function (a) { totall = totall + " " + a; });
-        return totall;
-      }
-    
-    arry = array.filter(myFunction5);
-    function myFunction5(value, index, array) {
-      return value == "Enero" || value == "Marzo" || value == "Noviembre";
-    }
+  function dePalabrasAFrase(palabras) {
 
-    var ordenado = arry.sort();
-    var mesesok = ['Enero', 'Marzo', 'Noviembre'];
-    var ordenadook = dePalabrasAFrase(ordenado);
-    var mesesokok = dePalabrasAFrase(mesesok);    
-  
-    if (mesesokok == ordenadook) {
-      return ordenado;
-    } else {
-      return "No se encontraron los meses pedidos"
-    }
+
+    var totall = "";
+    palabras.forEach(function (a) { totall = totall + " " + a; });
+    return totall;
   }
+
+  arry = array.filter(myFunction5);
+  function myFunction5(value, index, array) {
+    return value == "Enero" || value == "Marzo" || value == "Noviembre";
+  }
+
+  var ordenado = arry.sort();
+  var mesesok = ['Enero', 'Marzo', 'Noviembre'];
+  var ordenadook = dePalabrasAFrase(ordenado);
+  var mesesokok = dePalabrasAFrase(mesesok);
+
+  if (mesesokok == ordenadook) {
+    return ordenado;
+  } else {
+    return "No se encontraron los meses pedidos"
+  }
+}
+
+function mesesDelAño(array) {
+  var arry = array.forEach(myNewFunction); 
+  var nuevoArray = [];
+  function myNewFunction(value, index, array) {
+    if (value == "Enero" || value == "Marzo" || value == "Noviembre") {
+      nuevoArray.push(value); 
+      console.log(nuevoArray);
+    } else {
+      console.log("No se encontro");
+    }
+  } return arry;
+}
 
 
 function mayorACien(array) {
