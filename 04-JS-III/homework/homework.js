@@ -62,12 +62,11 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  function dePalabrasAFrase(palabras) {
     var totall = "";
     palabras.forEach(function (a) { totall = totall + " " + a; });
     return totall;
   }
-}
+
 
 
 
@@ -190,69 +189,92 @@ function todosIguales(arreglo) {
 
 
 
-  function mesesDelAño(array) {
-    //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
-    // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
-    //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
-    // Tu código:
-  }
-
-
-  function mayorACien(array) {
-    //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
-    //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
-    // Tu código:
-    var arry = array.filter(myFunction4);
-    function myFunction4(value,index,array){
-      return value > 100; 
+function mesesDelAño(array) {
+  //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
+  // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
+  //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
+  // Tu código:  
+    function dePalabrasAFrase(palabras) {
+      
+      
+        var totall = "";
+        palabras.forEach(function (a) { totall = totall + " " + a; });
+        return totall;
+      }
+    
+    arry = array.filter(myFunction5);
+    function myFunction5(value, index, array) {
+      return value == "Enero" || value == "Marzo" || value == "Noviembre";
     }
-    return arry;
+
+    var ordenado = arry.sort();
+    var mesesok = ['Enero', 'Marzo', 'Noviembre'];
+    var ordenadook = dePalabrasAFrase(ordenado);
+    var mesesokok = dePalabrasAFrase(mesesok);    
+  
+    if (mesesokok == ordenadook) {
+      return ordenado;
+    } else {
+      return "No se encontraron los meses pedidos"
+    }
   }
 
 
-  function breakStatement(numero) {
-    //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
-    //Guardar cada nuevo valor en un array. 
-    //Devolver el array
-    //Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y 
-    //devolver: "Se interrumpió la ejecución"
-    //Pista: usá el statement 'break'
-    // Tu código:
+function mayorACien(array) {
+  //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
+  //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
+  // Tu código:
+  var arry = array.filter(myFunction4);
+  function myFunction4(value, index, array) {
+    return value > 100;
   }
+  return arry;
+}
 
 
-  function continueStatement(numero) {
-    //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
-    //Guardar cada nuevo valor en un array.    
-    //Devolver el array
-    //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
-    //Pista: usá el statement 'continue'
-    // Tu código:
-  }
+function breakStatement(numero) {
+  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+  //Guardar cada nuevo valor en un array. 
+  //Devolver el array
+  //Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y 
+  //devolver: "Se interrumpió la ejecución"
+  //Pista: usá el statement 'break'
+  // Tu código:
+}
 
 
-  // No modificar nada debajo de esta línea
-  // --------------------------------
+function continueStatement(numero) {
+  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+  //Guardar cada nuevo valor en un array.    
+  //Devolver el array
+  //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
+  //Pista: usá el statement 'continue'
+  // Tu código:
+}
 
-  module.exports = {
-    devolverPrimerElemento,
-    devolverUltimoElemento,
-    obtenerLargoDelArray,
-    incrementarPorUno,
-    agregarItemAlFinalDelArray,
-    agregarItemAlComienzoDelArray,
-    dePalabrasAFrase,
-    arrayContiene,
-    agregarNumeros,
-    promedioResultadosTest,
-    numeroMasGrande,
-    multiplicarArgumentos,
-    cuentoElementos,
-    diaDeLaSemana,
-    empiezaConNueve,
-    todosIguales,
-    mesesDelAño,
-    mayorACien,
-    breakStatement,
-    continueStatement
-  };
+
+// No modificar nada debajo de esta línea
+// --------------------------------
+
+module.exports = {
+  devolverPrimerElemento,
+  devolverUltimoElemento,
+  obtenerLargoDelArray,
+  incrementarPorUno,
+  agregarItemAlFinalDelArray,
+  agregarItemAlComienzoDelArray,
+  dePalabrasAFrase,
+  arrayContiene,
+  agregarNumeros,
+  promedioResultadosTest,
+  numeroMasGrande,
+  multiplicarArgumentos,
+  cuentoElementos,
+  diaDeLaSemana,
+  empiezaConNueve,
+  todosIguales,
+  mesesDelAño,
+  mayorACien,
+  breakStatement,
+  continueStatement
+};
