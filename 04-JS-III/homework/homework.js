@@ -62,12 +62,12 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-    var totall = ""; 
-    var nuevoArreglito = [];
-    for(var i = 0; i<palabras.length;i++)
+  var totall = "";
+  var nuevoArreglito = [];
+  for (var i = 0; i < palabras.length; i++)
     nuevoArreglito.push(palabras[i]);
-    return nuevoArreglito.join(" ");
-  }
+  return nuevoArreglito.join(" ");
+}
 
 
 
@@ -129,18 +129,18 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  if (arguments.length == 0){
+  if (arguments.length == 0) {
     return 0;
-  }else if(arguments.length == 1){
+  } else if (arguments.length == 1) {
     return arguments[0];
-  }else{
+  } else {
     var total = 1;
-    for (var i = 0; i < arguments.length;i++){
-      total = total*arguments[i];
+    for (var i = 0; i < arguments.length; i++) {
+      total = total * arguments[i];
     }
-      return total;
-    }
+    return total;
   }
+}
 
 
 function cuentoElementos(arreglo) {
@@ -219,15 +219,15 @@ function mesesDelAño(array) {
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:  
 
-    var m = array.filter(myFunctionFilter);
-    function myFunctionFilter(value, index, array) {
-      return value == "Enero" || value == "Marzo" || value == "Noviembre";
-    } if (m.length > 2) {
-      return m;
-    } else {
-      return "No se encontraron los meses pedidos";
-    }
+  var m = array.filter(myFunctionFilter);
+  function myFunctionFilter(value, index, array) {
+    return value == "Enero" || value == "Marzo" || value == "Noviembre";
+  } if (m.length > 2) {
+    return m;
+  } else {
+    return "No se encontraron los meses pedidos";
   }
+}
 
 
 function mayorACien(array) {
@@ -249,54 +249,66 @@ function breakStatement(numero) {
   //Si en algún momento el valor de la suma y la cantidad de iteraciones coinciden, debe interrumpirse la ejecución y 
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
-  // Tu código:
-  nuevoarreglo = [];
-  Loop1:
-  for (let i = 0; i <= 20; i++) {
-    i + 1;
-    numero = numero + i; nuevoarreglo.push(numero);
-
-    Loop2:
-    for (let i = 10; i < 15; i++) {
-      numero = numero + i;
-      if (i === numero) break Loop1; return "Se interrumpió la ejecución";
+  // Tu código:    
+  var numerote = numero;
+  arreglote = [];
+  for (var i = 0; i < 10; i++) {
+    numerote += 2;
+    if (i == numerote)  break;
+    
+      else {
+      arreglote.push(numerote);
     }
+  }
+  if (i<10){
+    return "Se interrumpió la ejecución"
+  }else{
+    return (arreglote);
   }
 }
 
 
-function continueStatement(numero) {
-  //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
-  //Guardar cada nuevo valor en un array.    
-  //Devolver el array
-  //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
-  //Pista: usá el statement 'continue'
-  // Tu código:
-}
+  function continueStatement(numero) {
+    //Iterar en un bucle aumentando en 2 el numero recibido hasta un límite de 10 veces.
+    //Guardar cada nuevo valor en un array.    
+    //Devolver el array
+    //Cuando el número de iteraciones alcance el valor 5, no se suma en ese caso y se continua con la siguiente iteración
+    //Pista: usá el statement 'continue'
+    // Tu código:
+
+    var numerote = numero;
+    arreglote = [];
+    for (var i = 0; i < 10; i++) {
+      if (i == 4) {
+        continue;
+      } numerote += 2;
+      arreglote.push(numerote);
+    } return arreglote;
+  }
 
 
-// No modificar nada debajo de esta línea
-// --------------------------------
+  // No modificar nada debajo de esta línea
+  // --------------------------------
 
-module.exports = {
-  devolverPrimerElemento,
-  devolverUltimoElemento,
-  obtenerLargoDelArray,
-  incrementarPorUno,
-  agregarItemAlFinalDelArray,
-  agregarItemAlComienzoDelArray,
-  dePalabrasAFrase,
-  arrayContiene,
-  agregarNumeros,
-  promedioResultadosTest,
-  numeroMasGrande,
-  multiplicarArgumentos,
-  cuentoElementos,
-  diaDeLaSemana,
-  empiezaConNueve,
-  todosIguales,
-  mesesDelAño,
-  mayorACien,
-  breakStatement,
-  continueStatement
-};
+  module.exports = {
+    devolverPrimerElemento,
+    devolverUltimoElemento,
+    obtenerLargoDelArray,
+    incrementarPorUno,
+    agregarItemAlFinalDelArray,
+    agregarItemAlComienzoDelArray,
+    dePalabrasAFrase,
+    arrayContiene,
+    agregarNumeros,
+    promedioResultadosTest,
+    numeroMasGrande,
+    multiplicarArgumentos,
+    cuentoElementos,
+    diaDeLaSemana,
+    empiezaConNueve,
+    todosIguales,
+    mesesDelAño,
+    mayorACien,
+    breakStatement,
+    continueStatement
+  };
