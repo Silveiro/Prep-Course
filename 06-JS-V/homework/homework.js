@@ -109,3 +109,5 @@ module.exports = {
   agregarMetodo,
   Persona
 };
+
+
