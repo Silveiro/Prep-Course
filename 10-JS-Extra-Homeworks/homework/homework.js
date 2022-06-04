@@ -10,7 +10,12 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
-}
+    var arregNuevo = [];
+    for(let x in objeto){
+      arregNuevo.push("[" + "\`" + x + "\`" + "," + " " +obje[x]+ "]" );
+    };console.log(arregNuevo);
+  }
+
 
 
 function numberOfCharacters(string) {
